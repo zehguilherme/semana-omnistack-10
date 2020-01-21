@@ -1,0 +1,47 @@
+ - Front-end Web: ReactJS
+
+ - Front-end Mobile: React Native + Expo
+
+ - Backend + Web + Mobile = NodeJS
+
+-------------------------------------------------
+
+- NodeJS (JavaScript): usado para dinamismo nas páginas Web
+
+- Chrome V8 JavaScript engine: - V8: engine que entende o JavaScript e provém um resultado (no navegador)
+
+- Execusão de JavaScript fora do browser: surge o NodeJS
+
+-------------------------------------------------
+
+- npm: node package manager (gerenciador de pacotes do node)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Back-end
+
+- Regras de negócio
+- Conexão banco de dados
+- Envio de email
+- Comunicação com webservices (serviços que podem prestar algum tipo de informação para a aplicação (consulta de CEP, cálculo de frete, etc))
+- Autenticação do usuário
+- Criptografia e segurança
+
+Se comnicará com o Front-end por JSON
+
+API - não possui parte visual dentro do Backend
+API Restful - API precisa seguir alguns padrões, regras (métodos, tipos de parâmetros)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Front-end
+
+- Front-end Web
+- Front-end Mobile
+- Serviços externos
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comunicação Front e Back
+
+- JSON (JavaScript Object Notation) -> Estrutura de dados (enviar dados para que sejam interpretados pelo Front)
