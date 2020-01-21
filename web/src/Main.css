@@ -1,0 +1,18 @@
+main {
+    flex: 1;  /*main ocupará todo o espaço disponível dele*/
+}
+
+/* Lista de desenvolvedores */
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 colunas com tamanho 1fr*/
+    gap: 20px;  /*cria uma distância entre as colunas e linhas de 20px*/
+    list-style: none;  /*tirar as bolinhas que ficam no ínico de cada item da lista*/
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    main ul {
+        grid-template-columns: 1fr;
+    }
+}
