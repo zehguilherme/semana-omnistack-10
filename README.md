@@ -1,2 +1,2 @@
 # semana-omnistack-10
-10 Semana Omnistack (Node, React e React Native)
+Semana Omnistack 10 (Node, React e React Native)
