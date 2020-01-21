@@ -1,0 +1,5 @@
+Representações de entidades dentro da aplicação.
+
+Entidades: informações armazenadas no banco de dados
+
+Exemplo: Dev
