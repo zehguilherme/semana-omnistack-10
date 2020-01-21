@@ -2,7 +2,11 @@ import socketio from 'socket.io-client';
 
 const socket = socketio('http://192.168.15.24:3333', {
     autoConnect: false,
-})
+});
+
+function subscribeToNewDevs(subscribeFunction) {  //ouvir o evento new-dev
+    socket.on('new-dev', subscribeFunction);
+}
 
 // conexão 
 function connect(latitude, longitude, techs) {
@@ -13,10 +17,6 @@ function connect(latitude, longitude, techs) {
     };
 
     socket.connect();
-
-    socket.on('message', text => {
-        console.log(text);
-    })
 }
 
 // desconexão
@@ -28,4 +28,5 @@ function disconnect () {
 export {
     connect,
     disconnect,
+    subscribeToNewDevs,
 };

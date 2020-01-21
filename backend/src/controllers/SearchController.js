@@ -10,7 +10,7 @@ module.exports = {
 
         const techsArray = parseStringAsArray(techs);
 
-        // lista devs - com filtros dessa vez
+        // lista devs - com filtros
         const devs = await Dev.find({
             techs: {  //techs que estejam dentro de $in
                 $in: techsArray,

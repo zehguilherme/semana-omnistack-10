@@ -9,6 +9,7 @@
 const axios = require('axios');                                     //biblioteca que faz chamadas para outras APIs
 const Dev = require('../models/Dev');                               //Dev no BD
 const parseStringAsArray = require('../utils/parseStringAsArray');  //função criada em parseStringAsArray.js
+const { findConnections, sendMessage } = require('../webSocket');
 
 
 module.exports = {
@@ -50,24 +51,32 @@ module.exports = {
                 techs: techsArray,
                 location,
             })
+
+            // filtrar as conexões que que estão a no máximo 10 Km de distância e que o novo dev tenha pelo menos 1 das tecnologias filtradas
+            const sendSocketMessageTo = findConnections(
+                { latitude, longitude },
+                techsArray,
+            )
+
+            sendMessage(sendSocketMessageTo, 'new-dev', dev);
         }
     
         return response.json(dev);
     },
 
-    // update: alterar dev
-    async update(request, response) {
+    // // update: alterar dev
+    // async update(request, response) {
 
-        name
-        avatar_url
-        bio
-        location
-        techs
+    //     name
+    //     avatar_url
+    //     bio
+    //     location
+    //     techs
 
-    },
+    // },
 
-    // destroy: deletar dev
-    async destroy(request, response) {
+    // // destroy: deletar dev
+    // async destroy(request, response) {
 
-    }
+    // }
 };

@@ -5,7 +5,7 @@ import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
-import { connect, disconnect } from '../services/socket';
+import { connect, disconnect, subscribeToNewDevs } from '../services/socket';
 
 // requestPermissionsAsync: pede permissões para o usuário para poder usar a localização dele
 // getCurrentPositionAsync: pega a posição do usuário
@@ -40,7 +40,13 @@ function Main ({ navigation }) {
         loadInitialPosititon();
     }, []);
 
+    useEffect(() => {
+        subscribeToNewDevs(dev => setDevs([...devs, dev]));
+    }, [devs]);
+
     function setupWebSocket() {
+        disconnect();  //desconecta do socket caso esteja conectado (não ficar com conexões sobrando)
+
         const { latitude, longitude } = currentRegion;
 
         connect(
