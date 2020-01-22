@@ -1,4 +1,4 @@
-# semana-omnistack-10
+# Semana Omnistack 10
 10ª Semana Omnistack da Rocketseat (Recnologias: Node.js, React e React Native).
 
 # Dependências
