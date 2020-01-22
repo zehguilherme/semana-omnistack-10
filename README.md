@@ -10,7 +10,7 @@
 API utilizando Node.js.
 
 # Front-end
-O Frontend web foi feio usando a tecnologia React conectada a mesma API do app mobile.
+O Frontend web foi feito usando a tecnologia React conectada a mesma API do app mobile.
 
 # Mobile
 O Mobile usa a tecnologia React Native e abstração Expo devido a esta última possuir configurações de fácil implementação.
