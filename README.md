@@ -1,6 +1,11 @@
 # semana-omnistack-10
 10ª Semana Omnistack da Rocketseat (Recnologias: Node.js, React e React Native).
 
+# Dependências
+- node
+- npm
+- yarn (opcional)
+
 # Back-end
 API utilizando Node.js.
 
